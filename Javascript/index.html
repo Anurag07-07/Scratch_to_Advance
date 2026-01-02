@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Todo List</h1>
+  <input type="text" placeholder="Enter The Todo">
+  <button onclick="AddTodo()">Add Todo</button>
+  <div id="todo"></div>
+  <script>
+    let Todo = []
+    function AddTodo(){
+      let data = document.querySelector('input').value
+      //Convert it into obj
+      let obj = {
+        data:data
+      }
+      Todo.push(obj)
+      Render()
+    }
+
+    function DeleteTodo(index){
+      Todo.splice(index,1)
+      Render()
+    }
+
+    function createEle(data,index){
+      const div = document.createElement('div')
+      const span = document.createElement('span')
+      const button = document.createElement('button')
+      div.setAttribute('id',index)
+      span.innerHTML = data
+      button.innerHTML = "Delete"
+      button.setAttribute('onclick',"DeleteTodo("+index+")")
+      div.appendChild(span)
+      div.appendChild(button)
+      return div
+    }
+
+    function Render(){
+      document.querySelector('#todo').innerHTML = ""
+      for (let id = 0; id < Todo.length; id++) {
+          let CElement = createEle(Todo[id].data,id)      
+          const doc = document.querySelector('#todo').appendChild(CElement)
+      }
+    }
+  </script>
+</body>
+</html>
