@@ -1,0 +1,68 @@
+<!-- mysql -u root -p to run the sql  -->
+
+
+SHOW DATABASES; //To see the databases
+USE <database Name> //to select a particular database
+SHOW TABLES; to see the tables
+CREATE DATABASE <database name> to create Database   
+
+//To Create Table 
+CREATE TABLE <tablename>(
+  <columnname1>  [datatype] <keyword>, 
+  <columnname2>  [datatype], 
+  <columnname3>  [datatype], 
+);
+
+DESC <tablename>; //To see the table description 
+
+INSERT INTO tablename (col1,col2,col3) VALUES (<value1>,<value2>,<value3>); 
+
+SELECT * from tablename  to see the coloum in database
+
+//Constraints
+CREATE TABLE table2 (Name VARCHAR(15) NOT NULL , DoB DATE DEFAULT "2000-01-01",Gender ENUM("Male","Female","Other"));
+
+//Add The VALUES
+INSERT INTO table2 (Name,DoB,Gender) VALUES ("Punit","2002-10-10","Male"),("Someone",DEFAULT,"Female"),("Anurag","2026-07-07","Male"),("Riya",DEFAULT,"Female");
+
+//Show Name From Table 
+SELECT Name FROM table2;
+
+Syntax SELECT * FROM <table name> WHERE {conditions...}
+
+//Show Name of Female 
+SELECT Name FROM table2 WHERE Gender = "Female"
+
+//Get Data of user whose dob is greater than 2026-07-07
+SELECT * FROM table2 WHERE DoB > "2026-07-07";
+
+//Get Data of user whose dob is less than 2026-07-07 and Male
+SELECT * FROM table2 WHERE DoB < "2026-07-07" AND GENDER = "Male";
+
+//Get Data of user whose name start with a
+SELECT * FROM table2 WHERE Name LIKE "a%";
+
+
+//Get Data of user whose Gender start with M
+SELECT * FROM table2 WHERE Gender LIKE "M%";
+
+//Get Data of user whose Name contains a 
+SELECT * FROM table2 WHERE Name LIKE "%a%";
+
+//Get Data of user whose dob is less than 2026-07-07 or they are Female
+SELECT * FROM table2 WHERE DoB < "2026-07-07" OR GENDER = "Female";
+
+//Get data of user whose gender is not other 
+SELECT * FROM table2 WHERE NOT Gender = "Other";
+
+//SORT the name in Ascending Order
+SELECT * FROM table2 ORDER BY Name; 
+//SORT the name in Decending Order
+SELECT * FROM table2 ORDER BY Name DESC;
+//SORT the DoB in Ascending Order
+SELECT * FROM table2 ORDER BY DoB; 
+//SORT the DoB in Decending Order and only row i want
+SELECT * FROM table2 ORDER BY DoB DESC LIMIT 1; 
+
+//Get data of user where gender is male order in asc order and want only 2 row 
+SELECT * FROM table2 WHERE Gender = "Male" ORDER BY DoB DESC LIMIT 2;
