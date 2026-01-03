@@ -1,3 +1,4 @@
+/*
 let first_name:string = "Anurag"
 console.log(first_name);
 
@@ -125,3 +126,65 @@ console.log(Grade.W);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+// Type Alises 
+
+type StringtoBool = number | string | boolean
+
+let value1:StringtoBool = "Typescript"
+
+let name1:'Anurag' | 'Manoj'
+
+console.log(value1);
+
+///////////////////////////////////////////////////Functions //////////////////////////////////////////////////////////////////
+
+type mathFunction = (a:number,b:number)=>number
+
+const add = (a:number,b:number):number=>{
+  return a+b
+}
+
+const sub:mathFunction = (a,b)=>{
+  return a-b
+}
+
+function logMsg(message:any):void{
+  console.log(message);
+}
+
+const ans1 =  sub(45,56);
+logMsg(ans1)
+
+function addSum(a:number,b:number,...c:number[]):number{
+  console.log(a,b);
+  const ans = c.reduce((curr,prev)=>curr+prev,0)
+  return ans
+}
+
+const ans2 = addSum(1,2,6,5,5,5,5,3,1,1)
+logMsg(ans2)
+
+*/
+
+const errMsg = (errmsg:string):never=>{
+  throw new Error(errmsg)
+}
+
+const StringorNumber =(value:any):string=>{
+  if (typeof value === 'string') {
+    return `This is String Type`
+  }
+  if (isNumber(value)) {
+    return `This is Number`   
+  }
+
+  return errMsg('Please Give a Valid Input')
+}
+
+function isNumber(value:any):boolean{
+  return typeof value === 'number' ? true : false
+}
+
+StringorNumber(45)
+StringorNumber("Hello")
+StringorNumber(true)
