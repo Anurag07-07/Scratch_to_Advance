@@ -152,8 +152,9 @@ function logMsg(message:any):void{
   console.log(message);
 }
 
-const ans1 =  sub(45,56);
-logMsg(ans1)
+*/
+// const ans1 =  sub(45,56);
+// logMsg(ans1)
 
 function addSum(a:number,b:number,...c:number[]):number{
   console.log(a,b);
@@ -162,9 +163,8 @@ function addSum(a:number,b:number,...c:number[]):number{
 }
 
 const ans2 = addSum(1,2,6,5,5,5,5,3,1,1)
-logMsg(ans2)
+// logMsg(ans2)
 
-*/
 
 const errMsg = (errmsg:string):never=>{
   throw new Error(errmsg)
