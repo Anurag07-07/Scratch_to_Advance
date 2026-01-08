@@ -189,7 +189,7 @@ StringorNumber(45)
 StringorNumber("Hello")
 StringorNumber(true)
 
-*/
+
 
 // function main(a:number,b:number,...c:number[]){
 //   console.log(a);
@@ -337,3 +337,75 @@ class Language{
 const lang = new Language()
 lang.SetLang = ["Rust","Golang","Typescript","C++"]
 console.log(lang.GetLang);
+*/
+
+//////////////////////////////////////////////Index Signature/////////////////////////////////////////
+
+// interface TranscationObj{
+//   readonly [key:string]:number
+//   Data1:number
+//   Data2:number
+//   Data3:number
+// }
+
+// let data:TranscationObj = {
+//   Data1:45,
+//   Data2:45,
+//   Data3:45,
+// }
+
+// console.log(data.Data1);
+// let data1:string = 'Data1'
+// console.log(data[data1]);
+
+// let ans = 0
+// for (const key in data) {
+//   ans+=data[key as keyof TranscationObj]
+// }
+// console.log(ans);
+
+// type Streams =  'salary' | 'bonus' | 'sidehustle' | string
+// type Incomes = Record<Streams,number | string>
+
+// let monthIncome:Incomes = {
+//   salary:200,
+//   bonus:500,
+//   sidehustle:1000
+// }
+
+// let sum = 0
+// for (const key in monthIncome) {
+//   console.log(monthIncome[key as keyof Incomes]);
+//   sum += monthIncome[key as keyof Incomes] as number
+// }
+// console.log(sum);
+
+
+// interface Users{
+//   [key:string] : string
+//   name:string,
+//   email:string
+// }
+
+
+
+type Streams = 'salary' | 'bonus' | 'sidehustle'
+type Incomes = Record<Streams, number>
+
+let IncomeStreams:Incomes = {
+  salary:2000.,
+  bonus:4512213,
+  sidehustle:4544321
+}
+
+let sum = 0;
+
+for (const key  in IncomeStreams) {
+  sum = sum + IncomeStreams[key as keyof Incomes]  
+}
+console.log(sum);
+
+
+(Object.keys(IncomeStreams) as (keyof typeof IncomeStreams)[]).forEach((v)=>{
+  console.log(v);
+})

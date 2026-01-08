@@ -61,7 +61,7 @@ SELECT * FROM table2 ORDER BY Name;
 SELECT * FROM table2 ORDER BY Name DESC;
 //SORT the DoB in Ascending Order
 SELECT * FROM table2 ORDER BY DoB; 
-//SORT the DoB in Decending Order and only row i want
+//SORT the DoB in Decending Order and only one row i want
 SELECT * FROM table2 ORDER BY DoB DESC LIMIT 1; 
 
 //Get data of user where gender is male order in asc order and want only 2 row 
