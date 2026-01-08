@@ -66,3 +66,67 @@ SELECT * FROM table2 ORDER BY DoB DESC LIMIT 1;
 
 //Get data of user where gender is male order in asc order and want only 2 row 
 SELECT * FROM table2 WHERE Gender = "Male" ORDER BY DoB DESC LIMIT 2;
+
+------------------------------------------- Class 2 ------------------------------------
+
+DELETE FROM <table name> WHERE {comparison ...} ORDER BY.. LIMIT ...
+
+--Delete data on basis of constraints
+DELETE FROM users WHERE Name LIKE "a%";
+
+--Delete Whole Data of Table
+DELETE FROM users; 
+
+--Update Data
+
+UPDATE <table name> SET <column 1> = value 1 WHERE {conditions};
+
+--Update the Particular Data
+UPDATE Actors SET FirstName = "RJ",NetworthInMillions = 1000 WHERE id = 4;
+
+--Update The Schema
+ALTER TABLE <table name> CHANGE <old colname> <new colname> [new contraint (datatype or constraint)]
+
+ALTER TABLE Actors CHANGE NetworthInMillions NetWorth DECIMAL(10,2);
+
+--Add something to Schema
+ALTER TABLE Tablename ADD [column name type contraints]
+ALTER TABLE Actors ADD Region VARCHAR(10) DEFAULT "Bollywood";
+
+--Add After or Add First used to add column in specific Position
+ALTER TABLE Actors ADD MiddleName VARCHAR(10) AFTER FirstName;
+
+--Drop Table Coloum
+ALTER TABLE Actors DROP MiddleName;
+
+--Store Data with some specific column name
+SELECT DOB AS "Date of Birth" FROM Actors;
+
+--Concat the Column
+SELECT CONCAT(FirstName," ",SecondName) AS Name FROM Actors;
+
+--Find Distinct Data
+SELECT DISTINCT Score FROM Students2;
+
+--Count all the people with single marital status and write column as single people
+SELECT count(*) AS "No of Single People" FROM Students2 WHERE Marital_Status = "Single";
+
+--Sum or Avg MIN or MAX the Score
+SELECT SUM(Score) FROM students2 where Marital_Status = "Married";
+SELECT AVG(Score) FROM students2 where Marital_Status = "Married";
+SELECT MIN(Score) FROM students2 where Marital_Status = "Married";
+SELECT MAX(Score) FROM students2 where Marital_Status = "Married";
+
+--Do this in One Query
+SELECT Marital_status, COUNT(*) FROM Students2 GROUP BY Marital_Status;
+
+--Use of Group BY
+SELECT AssetType,COUNT(*) FROM DigitalAssets GROUP BY AssetType ORDER BY AssetType;
+
+SELECT Name FROM Students GROUP BY Name ORDER BY Name;
+
+----Having Clause along with Group By
+SELECT DOB,COUNT(*) FROM Students2 GROUP BY DOB HAVING DOB > "1998-04-26";
+
+
+SELECT Marital_Status, AVG(Score) AS Average FROM students2 GROUP BY Marital_Status HAVING Marital_Status = "Married"
