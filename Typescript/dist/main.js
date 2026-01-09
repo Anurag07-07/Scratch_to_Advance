@@ -1,3 +1,4 @@
+"use strict";
 /*
 let first_name:string = "Anurag"
 console.log(first_name);
@@ -338,11 +339,123 @@ const lang = new Language()
 lang.SetLang = ["Rust","Golang","Typescript","C++"]
 console.log(lang.GetLang);
 */
-var Obj = {
-    Pizza: 45,
-    Books: 78,
-    Job: 1
-};
-for (var key in Obj) {
-    console.log("key is ".concat(key, " and Value is  ").concat(key));
-}
+Object.defineProperty(exports, "__esModule", { value: true });
+//////////////////////////////////////////////Index Signature/////////////////////////////////////////
+// interface TranscationObj{
+//   readonly [key:string]:number
+//   Data1:number
+//   Data2:number
+//   Data3:number
+// }
+// let data:TranscationObj = {
+//   Data1:45,
+//   Data2:45,
+//   Data3:45,
+// }
+// console.log(data.Data1);
+// let data1:string = 'Data1'
+// console.log(data[data1]);
+// let ans = 0
+// for (const key in data) {
+//   ans+=data[key as keyof TranscationObj]
+// }
+// console.log(ans);
+// type Streams =  'salary' | 'bonus' | 'sidehustle' | string
+// type Incomes = Record<Streams,number | string>
+// let monthIncome:Incomes = {
+//   salary:200,
+//   bonus:500,
+//   sidehustle:1000
+// }
+// let sum = 0
+// for (const key in monthIncome) {
+//   console.log(monthIncome[key as keyof Incomes]);
+//   sum += monthIncome[key as keyof Incomes] as number
+// }
+// console.log(sum);
+// interface Users{
+//   [key:string] : string
+//   name:string,
+//   email:string
+// }
+// type Streams = 'salary' | 'bonus' | 'sidehustle'
+// type Incomes = Record<Streams, number>
+// let IncomeStreams:Incomes = {
+//   salary:2000.,
+//   bonus:4512213,
+//   sidehustle:4544321
+// }
+// let sum = 0;
+// for (const key  in IncomeStreams) {
+//   sum = sum + IncomeStreams[key as keyof Incomes]  
+// }
+// console.log(sum);
+// (Object.keys(IncomeStreams) as (keyof typeof IncomeStreams)[]).forEach((v)=>{
+//   console.log(v);
+// })
+// const echo = <T>(arg:T):T=>arg
+// const isObj = <T>(arg:T):boolean=>{
+//   return (typeof arg==='object' && !Array.isArray(arg) && arg!=null)
+// }
+// interface BoolCheck<T>{
+//   arg:T
+//   is:boolean
+// }
+// const isTrue  = <T>(arg:T):BoolCheck<T>=>{
+//   if(Array.isArray(arg) && !arg.length){
+//     return {arg,is:false};
+//   }
+//   if(isObj(arg) && Object.keys(arg as object).length){
+//     return {arg,is:false}
+//   }
+//   return {arg,is:!!arg}
+// }
+// console.log(
+// isTrue({name:"Anurag"}),
+// isTrue([1,2,3,4,5]),
+// isTrue(false),
+// isTrue("Javascript")
+// )
+// interface HASID{
+//   id:number
+// }
+// const processUser = <T extends HASID>(user:T):T=>{
+//   return user
+// }
+// let users = [
+//   {
+//     "id": 1,
+//     "name": "Leanne Graham",
+//     "username": "Bret",
+//     "email": "Sincere@april.biz",
+//     "address": {
+//       "street": "Kulas Light",
+//       "suite": "Apt. 556",
+//       "city": "Gwenborough",
+//       "zipcode": "92998-3874",
+//       "geo": {
+//         "lat": "-37.3159",
+//         "lng": "81.1496"
+//       }
+//     }
+//   }
+// ]
+// const isUser = <T extends HASID,K extends keyof T>(users:T[],key:K):T[K][]=>{
+//   return users.map((user)=>user[key])
+// }
+// class StateObject<T>{
+//   private data:T
+//   constructor(value:T){
+//     this.data = value
+//   }
+//   get state():T{
+//     return this.data
+//   }
+//   set state(value:T){
+//     this.data = value
+//   }
+// }
+// const s = new StateObject<string | number | string[]>(['a','b','c'])
+// type Stream = 'salary' | 'bonus' | 'sidehustle'  
+// type StreamObject = Record<Stream ,string | number>
+//# sourceMappingURL=main.js.map

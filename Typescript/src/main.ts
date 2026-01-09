@@ -389,23 +389,105 @@ console.log(lang.GetLang);
 
 
 
-type Streams = 'salary' | 'bonus' | 'sidehustle'
-type Incomes = Record<Streams, number>
+// type Streams = 'salary' | 'bonus' | 'sidehustle'
+// type Incomes = Record<Streams, number>
 
-let IncomeStreams:Incomes = {
-  salary:2000.,
-  bonus:4512213,
-  sidehustle:4544321
-}
+// let IncomeStreams:Incomes = {
+//   salary:2000.,
+//   bonus:4512213,
+//   sidehustle:4544321
+// }
 
-let sum = 0;
+// let sum = 0;
 
-for (const key  in IncomeStreams) {
-  sum = sum + IncomeStreams[key as keyof Incomes]  
-}
-console.log(sum);
+// for (const key  in IncomeStreams) {
+//   sum = sum + IncomeStreams[key as keyof Incomes]  
+// }
+// console.log(sum);
 
 
-(Object.keys(IncomeStreams) as (keyof typeof IncomeStreams)[]).forEach((v)=>{
-  console.log(v);
-})
+// (Object.keys(IncomeStreams) as (keyof typeof IncomeStreams)[]).forEach((v)=>{
+//   console.log(v);
+// })
+
+// const echo = <T>(arg:T):T=>arg
+
+// const isObj = <T>(arg:T):boolean=>{
+//   return (typeof arg==='object' && !Array.isArray(arg) && arg!=null)
+// }
+
+// interface BoolCheck<T>{
+//   arg:T
+//   is:boolean
+// }
+
+// const isTrue  = <T>(arg:T):BoolCheck<T>=>{
+//   if(Array.isArray(arg) && !arg.length){
+//     return {arg,is:false};
+//   }
+//   if(isObj(arg) && Object.keys(arg as object).length){
+//     return {arg,is:false}
+//   }
+//   return {arg,is:!!arg}
+// }
+
+
+// console.log(
+// isTrue({name:"Anurag"}),
+// isTrue([1,2,3,4,5]),
+// isTrue(false),
+// isTrue("Javascript")
+// )
+
+// interface HASID{
+//   id:number
+// }
+
+// const processUser = <T extends HASID>(user:T):T=>{
+//   return user
+// }
+
+
+// let users = [
+//   {
+//     "id": 1,
+//     "name": "Leanne Graham",
+//     "username": "Bret",
+//     "email": "Sincere@april.biz",
+//     "address": {
+//       "street": "Kulas Light",
+//       "suite": "Apt. 556",
+//       "city": "Gwenborough",
+//       "zipcode": "92998-3874",
+//       "geo": {
+//         "lat": "-37.3159",
+//         "lng": "81.1496"
+//       }
+//     }
+//   }
+// ]
+
+// const isUser = <T extends HASID,K extends keyof T>(users:T[],key:K):T[K][]=>{
+//   return users.map((user)=>user[key])
+// }
+
+// class StateObject<T>{
+//   private data:T
+//   constructor(value:T){
+//     this.data = value
+//   }
+
+//   get state():T{
+//     return this.data
+//   }
+
+//   set state(value:T){
+//     this.data = value
+//   }
+// }
+
+// const s = new StateObject<string | number | string[]>(['a','b','c'])
+
+
+// type Stream = 'salary' | 'bonus' | 'sidehustle'  
+// type StreamObject = Record<Stream ,string | number>
