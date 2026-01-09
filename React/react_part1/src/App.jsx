@@ -8,6 +8,10 @@ import ArrayOfObject from "./Components/Hooks/UseStateHook/ArrayOfObject"
 import ArrayUseState from "./Components/Hooks/UseStateHook/ArrayUseState"
 import BaseUseState from "./Components/Hooks/UseStateHook/BaseUseState"
 import MiniProject1 from "./Components/Hooks/UseStateHook/ComplexUseStateEffectHook/MiniProject1"
+import Counter from "./Components/Hooks/UseStateHook/MiniAssessment/Counter"
+import ProductCart from "./Components/Hooks/UseStateHook/MiniAssessment/ProductCart"
+import TodoList from "./Components/Hooks/UseStateHook/MiniAssessment/TodoList"
+import UpdateProfile from "./Components/Hooks/UseStateHook/MiniAssessment/UpdateProfile"
 import ObjectUseState from "./Components/Hooks/UseStateHook/ObjectUseState"
 import ComponentOne from "./Components/Hooks/UseStateHook/UseStateFunction/ComponentOne"
 import FunctionUseState from "./Components/Hooks/UseStateHook/UseStateFunction/FunctionUseState"
@@ -26,7 +30,11 @@ const App = () => {
       {/* <ArrayOfObject></ArrayOfObject> */}
       {/* <ComponentOne></ComponentOne> */}
         {/* <FunctionUseState></FunctionUseState> */}
-        <MiniProject1></MiniProject1>
+        {/* <MiniProject1></MiniProject1> */}
+        {/* <Counter></Counter> */}
+        {/* <TodoList></TodoList> */}
+        {/* <UpdateProfile></UpdateProfile> */}
+        <ProductCart></ProductCart>
     </div>
   )
 }
