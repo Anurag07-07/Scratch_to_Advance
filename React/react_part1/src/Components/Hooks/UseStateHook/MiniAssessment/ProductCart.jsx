@@ -8,23 +8,22 @@ const ProductCart = () => {
     Quantity:0
   })
 
-  function AddProduct(){
-    setProdcutList([...productList,product])
-    setProduct({
-      name:"",
-      Quantity:0
-    })
+  function AddProduct(e){
+    e.preventDefault();
+    if(product.name && product.name.length){
+      setProdcutList([...productList,product])
+      setProduct({
+        name:"",
+        Quantity:0
+      })
+    }
   }
 
-  function AddProd(e){
-    let prod = e.target.value
-    setProduct({...product,name:prod})
+  function ChangeHandler(e){
+    let {name,value} = e.target
+    setProduct({...product,[name]:value})
   }
   
-  function AddQuant(e){
-    let quan = e.target.value
-    setProduct({...product,Quantity:quan})
-  }
   return (
     <div>
       <div>
@@ -38,15 +37,19 @@ const ProductCart = () => {
             })
           }
         </div>
-        <div>
+        <form onSubmit={AddProduct}>
           <h2>Add Products</h2>
-          <input value={product.name} onChange={AddProd}  placeholder='Enter the Product'></input>
-          <input value={product.Quantity} onChange={AddQuant}   placeholder='Enter the Quantity'></input>
-          <button onClick={AddProduct}>Add Product</button>
-        </div>
+          <input name='name' value={product.name} onChange={ChangeHandler}  placeholder='Enter the Product'></input>
+          <input name='Quantity' value={product.Quantity} onChange={ChangeHandler}   placeholder='Enter the Quantity'></input>
+          <button type='submit'>Add Product</button>
+        </form>
       </div>
     </div>
   )
 }
 
 export default ProductCart
+
+
+//Mistake To Recover Use Form Instead of Normal Input and Submit Button 
+//Apply PreventDefault to Protect Direct Submission

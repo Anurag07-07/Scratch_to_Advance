@@ -37,3 +37,6 @@ const UpdateProfile = () => {
 }
 
 export default UpdateProfile
+
+//use Form and onSubmit 
+//also see where this is use [name]:value
