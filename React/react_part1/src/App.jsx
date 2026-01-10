@@ -4,6 +4,9 @@ import Header from "./Components/Base/Header"
 import Main from "./Components/Base/Main"
 import Portal from "./Components/Base/Portal"
 import Products from "./Components/Base/Products"
+import CopyInput from "./Components/Hooks/Portal/CopyInput"
+import DocumentUseEffect from "./Components/Hooks/UseEffect/DocumentUseEffect"
+import FetchData from "./Components/Hooks/UseEffect/FetchData"
 import ArrayOfObject from "./Components/Hooks/UseStateHook/ArrayOfObject"
 import ArrayUseState from "./Components/Hooks/UseStateHook/ArrayUseState"
 import BaseUseState from "./Components/Hooks/UseStateHook/BaseUseState"
@@ -34,7 +37,10 @@ const App = () => {
         {/* <Counter></Counter> */}
         {/* <TodoList></TodoList> */}
         {/* <UpdateProfile></UpdateProfile> */}
-        <ProductCart></ProductCart>
+        {/* <ProductCart></ProductCart> */}
+        {/* <CopyInput></CopyInput> */}
+        {/* <DocumentUseEffect></DocumentUseEffect> */}
+        <FetchData></FetchData>
     </div>
   )
 }
