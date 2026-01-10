@@ -130,3 +130,27 @@ SELECT DOB,COUNT(*) FROM Students2 GROUP BY DOB HAVING DOB > "1998-04-26";
 
 
 SELECT Marital_Status, AVG(Score) AS Average FROM students2 GROUP BY Marital_Status HAVING Marital_Status = "Married"
+
+--------------------------------------Class 3--------------------------------------------------------------------------------------
+Joins 
+SELECT * FROM <table 1> INNER JOIN <table 2> ON (join condition)
+SELECT * FROM <table 1> LEFT JOIN <table 2> ON (join condition)
+
+SELECT * FROM Actors RIGHT JOIN DigitalAssets ON actors.Id = digitalassets.id;
+SELECT * FROM Actors LEFT JOIN DigitalAssets ON actors.Id = digitalassets.id;
+
+SELECT * FROM Actors,DigitalAssets WHERE Actors.Id = DigitalAssets.Id
+
+--Every data from left table and matched data from right table
+SELECT FirstName,DOB,URL FROM Actors LEFT JOIN Digitalassets USING(Id); 
+--Every data from Right table and matched data from Left table
+SELECT FirstName,DOB,URL FROM Actors RIGHT JOIN Digitalassets USING(Id); 
+SELECT FirstName,DOB,URL FROM Actors INNER JOIN Digitalassets;
+--Key that match only joins  
+SELECT FirstName,DOB,URL FROM Actors NATURAL JOIN Digitalassets; 
+
+-- USING(Id) only when both tables have same connecting column name 
+-- Cartesian Product i.e every row from table a matched with every other row from table b - Count is No. of rows of A * No. of rows of B 
+-- Union use
+--Natural JOIN 
+--Self Join
