@@ -5,6 +5,7 @@ import Main from "./Components/Base/Main"
 import Portal from "./Components/Base/Portal"
 import Products from "./Components/Base/Products"
 import CopyInput from "./Components/Hooks/Portal/CopyInput"
+import { UserContext } from "./Components/Hooks/UseContext/UserContext"
 import DocumentUseEffect from "./Components/Hooks/UseEffect/DocumentUseEffect"
 import FetchData from "./Components/Hooks/UseEffect/FetchData"
 import ArrayOfObject from "./Components/Hooks/UseStateHook/ArrayOfObject"
@@ -40,7 +41,8 @@ const App = () => {
         {/* <ProductCart></ProductCart> */}
         {/* <CopyInput></CopyInput> */}
         {/* <DocumentUseEffect></DocumentUseEffect> */}
-        <FetchData></FetchData>
+        {/* <FetchData></FetchData> */}
+        <UserContext></UserContext>
     </div>
   )
 }
