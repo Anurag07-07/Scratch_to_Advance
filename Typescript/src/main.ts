@@ -491,3 +491,100 @@ console.log(lang.GetLang);
 
 // type Stream = 'salary' | 'bonus' | 'sidehustle'  
 // type StreamObject = Record<Stream ,string | number>
+
+
+
+// interface Transaction{
+//   [key:string]:number
+//   Pizza:number,
+//   Burger:number
+// }
+
+// const TransactionObj = {
+//   Pizza:10,
+//   Burger:20
+// }
+
+// let sum = 0
+// for (const key in TransactionObj) {
+//   console.log(TransactionObj[key as keyof typeof TransactionObj]);
+// }
+// console.log(sum);
+
+
+// type Streams = 'salary' | 'bonus' | 'freelance'
+// type Incomes = Record<Streams,number>
+
+// const mI:Incomes = {
+//   salary:45452,
+//   bonus:544532121312131,
+//   freelance:453212112121321
+// }
+
+// let sum = 0;
+// for (const key in mI) {
+//   sum+=mI[key as keyof typeof mI]
+// }
+
+// console.log(sum);
+
+// const echo = <T>(arg:T):T=> arg
+
+const isObj = <T>(arg:T):boolean=>{
+  if (typeof arg==='object' && !Array.isArray(arg) && arg!=null) {
+    return true
+  }
+  return false
+}
+
+console.log(
+  isObj({name:'Anurag'}),
+  isObj([1,2]),
+  isObj(null),
+  isObj("Hello")
+);
+
+// interface BoolCheck<T>{
+//   arg:T
+//   is:boolean
+// }
+
+// const isTrue = <T>(arg:T):BoolCheck<T>=>{
+//   return {arg,is:!!arg}
+// }
+
+
+// interface HasID{
+//   id:number
+// }
+
+// const processUser = <T extends HasID>(user:T):T=>{
+//   return user
+// }
+
+// user 
+// interface HASID{
+//   id:number
+// }
+
+
+
+// const getUserProperty = <T extends HASID,K extends keyof T>(users:T[],key:K):T[K][]=>{
+//   return users.map((user)=>user[key])
+// }
+class StateObject<T>{
+  private data:T
+  constructor(value:T){
+    this.data = value
+  }
+
+  get State():T{
+    return this.data
+  }
+
+  set State(value:T){
+    this.data = value
+  }
+}
+
+const Obj = new StateObject<string | number | string[]>(["Anurag","Manoj"])

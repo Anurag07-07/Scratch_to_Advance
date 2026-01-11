@@ -1,10 +1,13 @@
+// type IncomeStream = 'salary' | 'bonus' | 'freelance'
+// type ExpenseCategory = 'houserent' | 'food' | 'travelling'
+
 type IncomeStream = 'salary' | 'bonus' | 'freelance'
-type ExpenseCategory = 'houserent' | 'food' | 'travelling'
+type ExpenseCategory = 'rent' | 'food' | 'travelling'
 
 type FinanceRecord<T extends string> = Record<T,number>
 
 interface Transaction<T extends string>{
-  readonly id:number,
+  readonly id:number
   type:'expense' | 'income'
   category:T
   amount:number

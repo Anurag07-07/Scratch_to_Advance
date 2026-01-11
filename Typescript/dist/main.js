@@ -458,4 +458,38 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // const s = new StateObject<string | number | string[]>(['a','b','c'])
 // type Stream = 'salary' | 'bonus' | 'sidehustle'  
 // type StreamObject = Record<Stream ,string | number>
+// interface Transaction{
+//   [key:string]:number
+//   Pizza:number,
+//   Burger:number
+// }
+// const TransactionObj = {
+//   Pizza:10,
+//   Burger:20
+// }
+// let sum = 0
+// for (const key in TransactionObj) {
+//   console.log(TransactionObj[key as keyof typeof TransactionObj]);
+// }
+// console.log(sum);
+// type Streams = 'salary' | 'bonus' | 'freelance'
+// type Incomes = Record<Streams,number>
+// const mI:Incomes = {
+//   salary:45452,
+//   bonus:544532121312131,
+//   freelance:453212112121321
+// }
+// let sum = 0;
+// for (const key in mI) {
+//   sum+=mI[key as keyof typeof mI]
+// }
+// console.log(sum);
+// const echo = <T>(arg:T):T=> arg
+const isObj = (arg) => {
+    if (typeof arg === 'object' && !Array.isArray(arg) && arg != null) {
+        return true;
+    }
+    return false;
+};
+console.log(isObj({ name: 'Anurag' }), isObj([1, 2]), isObj(null), isObj("Hello"));
 //# sourceMappingURL=main.js.map

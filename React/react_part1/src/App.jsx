@@ -8,6 +8,8 @@ import CopyInput from "./Components/Hooks/Portal/CopyInput"
 import { UserContext } from "./Components/Hooks/UseContext/UserContext"
 import DocumentUseEffect from "./Components/Hooks/UseEffect/DocumentUseEffect"
 import FetchData from "./Components/Hooks/UseEffect/FetchData"
+import ReducerPractice from "./Components/Hooks/UseReducer/Assessment/ReducerPractice"
+import Reducer from "./Components/Hooks/UseReducer/Reducer"
 import ArrayOfObject from "./Components/Hooks/UseStateHook/ArrayOfObject"
 import ArrayUseState from "./Components/Hooks/UseStateHook/ArrayUseState"
 import BaseUseState from "./Components/Hooks/UseStateHook/BaseUseState"
@@ -42,7 +44,9 @@ const App = () => {
         {/* <CopyInput></CopyInput> */}
         {/* <DocumentUseEffect></DocumentUseEffect> */}
         {/* <FetchData></FetchData> */}
-        <UserContext></UserContext>
+        {/* <UserContext></UserContext> */}
+        {/* <Reducer></Reducer> */}
+        <ReducerPractice></ReducerPractice>
     </div>
   )
 }
