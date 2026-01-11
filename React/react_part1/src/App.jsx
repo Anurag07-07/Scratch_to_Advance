@@ -4,12 +4,18 @@ import Header from "./Components/Base/Header"
 import Main from "./Components/Base/Main"
 import Portal from "./Components/Base/Portal"
 import Products from "./Components/Base/Products"
+import FetchingData from "./Components/Hooks/CustomHooks/FetchingData"
+import UsePrev from "./Components/Hooks/CustomHooks/UsePrev"
 import CopyInput from "./Components/Hooks/Portal/CopyInput"
 import { UserContext } from "./Components/Hooks/UseContext/UserContext"
+import Debounce from "./Components/Hooks/UseDebounce/Debounce"
 import DocumentUseEffect from "./Components/Hooks/UseEffect/DocumentUseEffect"
 import FetchData from "./Components/Hooks/UseEffect/FetchData"
+import UseIdHook from "./Components/Hooks/UseId/UseIdHook"
 import ReducerPractice from "./Components/Hooks/UseReducer/Assessment/ReducerPractice"
 import Reducer from "./Components/Hooks/UseReducer/Reducer"
+import Timer from "./Components/Hooks/UseRef/Assessment/Timer"
+import UseRefHook from "./Components/Hooks/UseRef/UseRefHook"
 import ArrayOfObject from "./Components/Hooks/UseStateHook/ArrayOfObject"
 import ArrayUseState from "./Components/Hooks/UseStateHook/ArrayUseState"
 import BaseUseState from "./Components/Hooks/UseStateHook/BaseUseState"
@@ -46,7 +52,13 @@ const App = () => {
         {/* <FetchData></FetchData> */}
         {/* <UserContext></UserContext> */}
         {/* <Reducer></Reducer> */}
-        <ReducerPractice></ReducerPractice>
+        {/* <ReducerPractice></ReducerPractice> */}
+        {/* <UseRefHook></UseRefHook> */}
+        {/* <Timer></Timer> */}
+        {/* <UseIdHook></UseIdHook> */}
+        {/* <FetchingData></FetchingData> */}
+        {/* <UsePrev></UsePrev> */}
+        <Debounce></Debounce>
     </div>
   )
 }
