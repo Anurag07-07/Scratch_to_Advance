@@ -20,7 +20,7 @@ function useDebounce(value,time){
 const Debounce = () => {
 
   const [value,setValue] = useState("")
-  const debounceValue = useDebounce(value,400)
+  const debounceValue = useDebounce(value,2000)
  
   useEffect(()=>{
     console.log("Backend Called");
@@ -34,6 +34,7 @@ const Debounce = () => {
   return (
     <div>
       <input value={value} placeholder='Enter the Value' onChange={ChangeHandler}></input>
+      <h1>{debounceValue}</h1>
     </div>
   )
 }
