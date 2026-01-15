@@ -1,8 +1,11 @@
 // import Button from "./Components/Basics/Button"
 // // import User from "./Components/User"
 
+import EventHandling from "./Components/Basics/EventHandling"
+import FocusInput from "./Components/Basics/FocusInput"
 import FormUseRef from "./Components/Basics/FormUseRef"
 import Todo from "./Components/Basics/Todo"
+import UserForm from "./Components/Basics/UserForm"
 // import UserProfiler from "./Components/Basics/UserProfiler"
 
 // import AdminInfo from "./Components/Basics/AdminInfo"
@@ -23,7 +26,10 @@ const App = () => {
       {/* <AdminInfo name="Anurag" age={22} salary="$200k" companyname="Edunax" email="anurag07raj@gmail.com"></AdminInfo> */}
       {/* <UserProfiler></UserProfiler> */}
       {/* <Todo></Todo> */}
-      <FormUseRef></FormUseRef>
+      {/* <FormUseRef></FormUseRef> */}
+      {/* <FocusInput></FocusInput> */}
+      {/* <UserForm></UserForm> */}
+      <EventHandling></EventHandling>
     </div>
   )
 }

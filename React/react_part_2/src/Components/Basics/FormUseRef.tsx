@@ -41,11 +41,11 @@ const FormUseRef = () => {
       <input placeholder='Enter the Email' ref={email}></input>
       <button type='submit'>Submit</button>
     </form>
-    <div>
+    <section>
       <h1>Name:{user.name}</h1>
       <h1>Email:{user.email}</h1>
       <h1>Password:{user.password}</h1>
-    </div>
+    </section>
     </>
   )
 }
