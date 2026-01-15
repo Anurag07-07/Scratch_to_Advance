@@ -1,11 +1,15 @@
 // import Button from "./Components/Basics/Button"
 // // import User from "./Components/User"
 
-import EventHandling from "./Components/Basics/EventHandling"
-import FocusInput from "./Components/Basics/FocusInput"
-import FormUseRef from "./Components/Basics/FormUseRef"
-import Todo from "./Components/Basics/Todo"
-import UserForm from "./Components/Basics/UserForm"
+import CounterUseReducer from "./Components/Basics/CounterUseReducer"
+
+// import Counter from "./Components/Basics/Counter"
+// import EventHandling from "./Components/Basics/EventHandling"
+// import FocusInput from "./Components/Basics/FocusInput"
+// import FormUseRef from "./Components/Basics/FormUseRef"
+// import Todo from "./Components/Basics/Todo"
+// import UseContext from "./Components/Basics/UseContext"
+// import UserForm from "./Components/Basics/UserForm"
 // import UserProfiler from "./Components/Basics/UserProfiler"
 
 // import AdminInfo from "./Components/Basics/AdminInfo"
@@ -29,7 +33,10 @@ const App = () => {
       {/* <FormUseRef></FormUseRef> */}
       {/* <FocusInput></FocusInput> */}
       {/* <UserForm></UserForm> */}
-      <EventHandling></EventHandling>
+      {/* <EventHandling></EventHandling> */}
+      {/* <Counter></Counter> */}
+      <CounterUseReducer></CounterUseReducer>
+
     </div>
   )
 }
