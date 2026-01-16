@@ -1,8 +1,6 @@
 // import Button from "./Components/Basics/Button"
 // // import User from "./Components/User"
 
-import CounterUseReducer from "./Components/Basics/CounterUseReducer"
-
 // import Counter from "./Components/Basics/Counter"
 // import EventHandling from "./Components/Basics/EventHandling"
 // import FocusInput from "./Components/Basics/FocusInput"
@@ -35,7 +33,8 @@ const App = () => {
       {/* <UserForm></UserForm> */}
       {/* <EventHandling></EventHandling> */}
       {/* <Counter></Counter> */}
-      <CounterUseReducer></CounterUseReducer>
+      {/* <CounterUseReducer></CounterUseReducer> */}
+      {/* <Form></Form> */}
 
     </div>
   )

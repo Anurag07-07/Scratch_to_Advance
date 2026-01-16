@@ -5,10 +5,6 @@ const CounterUseReducer = () => {
   type Action = {type:'INCREMENT'} | {type:'DECREMENT'}
   type State = {count:number}
 
-
-
-
-
   const reducer = (state:State,action:Action):State=>{
     switch (action.type) {
       case "INCREMENT":
