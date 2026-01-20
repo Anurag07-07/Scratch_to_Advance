@@ -1,5 +1,7 @@
-import BouncingLoader from "./Components/BouncingLoader"
-import Visible from "./Components/Visible"
+// import BouncingLoader from "./Components/BouncingLoader"
+import FlipCard from "./Components/FlipCard"
+import HoverAnimation from "./Components/HoverAnimation"
+// import Visible from "./Components/Visible"
 const App = () => {
   return (
     <div className=" w-screen h-screen bg-black flex justify-center items-center">
@@ -7,7 +9,9 @@ const App = () => {
     </motion.div> */}
     {/* <Button></Button> */}
     {/* <BouncingLoader></BouncingLoader> */}
-    <Visible></Visible>
+    {/* <Visible></Visible> */}
+    {/* <FlipCard></FlipCard> */}
+    <HoverAnimation></HoverAnimation>
     </div>
   )
 }
