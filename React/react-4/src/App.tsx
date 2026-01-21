@@ -1,4 +1,6 @@
 // import BouncingLoader from "./Components/BouncingLoader"
+import AnimatedBox from "./Components/AnimatedBox"
+import Card from "./Components/Card"
 import FlipCard from "./Components/FlipCard"
 import HoverAnimation from "./Components/HoverAnimation"
 // import Visible from "./Components/Visible"
@@ -11,7 +13,9 @@ const App = () => {
     {/* <BouncingLoader></BouncingLoader> */}
     {/* <Visible></Visible> */}
     {/* <FlipCard></FlipCard> */}
-    <HoverAnimation></HoverAnimation>
+    {/* <HoverAnimation></HoverAnimation> */}
+    {/* <Card></Card> */}
+    <AnimatedBox></AnimatedBox>
     </div>
   )
 }
