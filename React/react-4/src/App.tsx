@@ -1,8 +1,10 @@
 // import BouncingLoader from "./Components/BouncingLoader"
-import AnimatedBox from "./Components/AnimatedBox"
-import Card from "./Components/Card"
-import FlipCard from "./Components/FlipCard"
-import HoverAnimation from "./Components/HoverAnimation"
+// import AnimatedBox from "./Components/AnimatedBox"
+// import Card from "./Components/Card"
+// import FlipCard from "./Components/FlipCard"
+// import HoverAnimation from "./Components/HoverAnimation"
+import AnimatedImages from "./Components/AnimatedImages"
+// import StaggerAnimation from "./Components/StaggerAnimation"
 // import Visible from "./Components/Visible"
 const App = () => {
   return (
@@ -15,7 +17,9 @@ const App = () => {
     {/* <FlipCard></FlipCard> */}
     {/* <HoverAnimation></HoverAnimation> */}
     {/* <Card></Card> */}
-    <AnimatedBox></AnimatedBox>
+    {/* <AnimatedBox></AnimatedBox> */}
+    {/* <StaggerAnimation></StaggerAnimation> */}
+    <AnimatedImages></AnimatedImages>
     </div>
   )
 }
