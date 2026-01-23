@@ -1,7 +1,8 @@
-import {motion, useMotionValue} from 'framer-motion'
+import {motion, useMotionValue, useSpring} from 'framer-motion'
 import type { ChangeEvent } from 'react'
 const RangeSlider = () => {
-  const value = useMotionValue(1)
+  const value = useSpring(1) //for smooth animation
+  // const value = useMotionValue(1)
 
   function ChangeHandler(e:ChangeEvent<HTMLInputElement>){
     value.set(parseFloat(e.target.value))
