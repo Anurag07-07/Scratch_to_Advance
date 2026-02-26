@@ -9,8 +9,8 @@ const FetchData = () => {
       const response = await fetch('https://jsonplaceholder.typicode.com/todos')
       const value = await response.json()
       if(value && value.length){
-        setData(value)
-      }        
+          setData(value)
+        }        
       } catch (error) {
         console.log(`Data is not recieved`);
         console.error(error);
